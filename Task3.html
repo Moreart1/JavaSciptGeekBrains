@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+        let result1 = 10 + 10 + "10"; //2010,т.к. 10 +10 = 20 и число 20 конкатенируется с числом 10
+        let result2 = 10 + "10" + 10; // 101010, т.к. все три числа конкатенируются между с собой из за  второй десятки.
+        let result3 = 10 + 10 + +"10"; // 30, т.к. 10 + 10 = 20 и последняя десятка это унарный плюс и он тоже будет 10 и у нас следует 
+        // 10 + 10 + 10 = 30;
+        let result4 = 10 / -""; // - Infinity, т.к. -"" это -0 а в JS если делим на 0 получаем бесконечность
+        let result5 = 10 / +"2,5"; // NaN, т.к. у нас запятая,а не точка поэтому он не может привести это в число.
+    </script>
+</body>
+
+</html>
